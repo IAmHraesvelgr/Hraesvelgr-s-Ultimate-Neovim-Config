@@ -15,10 +15,6 @@ require("lazy").setup({
     {
     	'nvim-telescope/telescope.nvim', tag = '0.1.6',
 	dependencies = { 'nvim-lua/plenary.nvim' },
-	config = function()
-		local builtin = require('telescope.builtin')
-		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-	end
     },
     { 
 	"rose-pine/neovim", 
@@ -42,6 +38,18 @@ require("lazy").setup({
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
+	end
+    },
+    {
+	"nvim-tree/nvim-tree.lua",
+	dependencies = "nvim-tree/nvim-web-devicons",
+	config = function()
+		vim.g.loaded_netrw = 1
+		vim.g.loaded_netrwPlugin = 1
+		
+		vim.opt.termguicolors = true
+
+		require('nvim-tree').setup()
 	end
     }
 })

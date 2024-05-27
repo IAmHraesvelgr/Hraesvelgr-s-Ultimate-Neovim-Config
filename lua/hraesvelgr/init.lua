@@ -1,2 +1,2 @@
-require('hraesvelgr.remaps')
 require('hraesvelgr.lazy')
+require('hraesvelgr.remaps')
