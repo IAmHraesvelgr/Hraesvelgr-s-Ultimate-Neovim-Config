@@ -5,7 +5,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -14,10 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {
     	'nvim-telescope/telescope.nvim', tag = '0.1.6',
-	dependencies = { 'nvim-lua/plenary.nvim' }
+	dependencies = { 'nvim-lua/plenary.nvim' },
+	config = function()
+		local builtin = require('telescope.builtin')
+		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+	end
     },
-    {
-	{ "rose-pine/neovim", 
+    { 
+	"rose-pine/neovim", 
 	name = "rose-pine", 
 	config = function()
 		vim.cmd('colorscheme rose-pine')
@@ -25,6 +29,19 @@ require("lazy").setup({
 		vim.api.nvim_set_hl(0, "Normal", { bg = None })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = None })
 	end
-	}
+    },
+    {
+	"nvim-treesitter/nvim-treesitter", 
+	build = ":TSUpdate",
+	config = function()
+		local configs = require('nvim-treesitter.configs')
+
+		configs.setup({
+			ensure_installed = { 'lua' },
+			sync_install = false,
+			highlight = { enable = true },
+			indent = { enable = true },
+		})
+	end
     }
 })
