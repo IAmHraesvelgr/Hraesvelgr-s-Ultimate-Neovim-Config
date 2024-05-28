@@ -120,4 +120,13 @@ require("lazy").setup({
         "folke/trouble.nvim",
         event = "VeryLazy",
     },
+    {
+        "nvim-lualine/lualine.nvim",
+        event = "VeryLazy",
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        options = { theme = vim.g.colors_name },
+        config = function()
+            require('lualine').setup()
+        end
+    },
 })
