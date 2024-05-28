@@ -41,15 +41,6 @@ local cmp_mappings = {
 	}),
 }
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-	handlers = {
-		function(server_name)
-			require('lspconfig')[server_name].setup({})
-		end
-	}
-})
-
 lsp.set_preferences({
 	sign_icons = { }
 })
@@ -66,4 +57,13 @@ cmp.setup({
 	},
 	mapping = cmp_mappings,
 	formatting = require('lsp-zero').cmp_format()
+})
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	handlers = {
+		function(server_name)
+			require('lspconfig')[server_name].setup({})
+		end
+	}
 })
