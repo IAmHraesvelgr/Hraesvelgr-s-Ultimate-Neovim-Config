@@ -20,7 +20,6 @@ require("lazy").setup({
     { 
 	    "rose-pine/neovim", 
 	    name = "rose-pine",
-        event = "VeryLazy",
 	    config = function()
 		    vim.cmd('colorscheme rose-pine')
 
