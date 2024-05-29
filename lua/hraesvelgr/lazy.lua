@@ -17,7 +17,7 @@ require("lazy").setup({
 	    dependencies = { 'nvim-lua/plenary.nvim' },
         event = "VeryLazy"
     },
-    { 
+    {
 	    "rose-pine/neovim", 
 	    name = "rose-pine",
 	    config = function()
@@ -58,7 +58,7 @@ require("lazy").setup({
 	    config = function()
 		    vim.g.loaded_netrw = 1
 		    vim.g.loaded_netrwPlugin = 1
-		
+
 		    vim.opt.termguicolors = true
 
 		    require('nvim-tree').setup()
@@ -99,7 +99,7 @@ require("lazy").setup({
         config = function()
             require("nvterm").setup({
                 terminals = {
-                    shell = "powershell"
+                    shell = "pwsh"
                 }
             })
         end,

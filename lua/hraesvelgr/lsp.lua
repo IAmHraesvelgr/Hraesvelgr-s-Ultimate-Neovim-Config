@@ -59,7 +59,7 @@ cmp.setup({
 	formatting = require('lsp-zero').cmp_format()
 })
 
-require('mason').setup()
+require('mason').setup({})
 require('mason-lspconfig').setup({
 	handlers = {
 		function(server_name)
