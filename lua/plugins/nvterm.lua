@@ -1,7 +1,7 @@
 return {
     {
         "NvChad/nvterm",
-        config = function ()
+        config = function()
             require("nvterm").setup({
                 terminals = {
                     shell = "pwsh"

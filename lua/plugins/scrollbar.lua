@@ -2,7 +2,7 @@ return {
     {
         "petertriho/nvim-scrollbar",
         event = "VeryLazy",
-        config = function ()
+        config = function()
             require("scrollbar").setup()
         end
     },
