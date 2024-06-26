@@ -1,5 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.guicursor = ""
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -15,6 +16,8 @@ vim.opt.scrolloff = 8
 
 vim.opt.updatetime = 50
 
-vim.o.shell = "pwsh"
+vim.o.shell = "powershell"
+
+vim.opt.termguicolors = true
 
 vim.opt.fillchars = { eob = ' ' }
