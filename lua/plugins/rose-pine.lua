@@ -3,10 +3,15 @@ return {
         "rose-pine/neovim",
         name = "rose-pine",
         config = function()
-            vim.cmd('colorscheme rose-pine')
+            require('rose-pine').setup({
+                styles = {
+                    bold = false,
+                    italic = false,
+                    transparency = true
+                }
+            })
 
-            vim.api.nvim_set_hl(0, "Normal", { bg = None })
-            vim.api.nvim_set_hl(0, "NormalFloat", { bg = None })
+            vim.cmd('colorscheme rose-pine')
         end
     },
 }
