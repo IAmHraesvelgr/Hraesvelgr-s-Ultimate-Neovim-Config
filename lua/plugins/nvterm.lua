@@ -1,10 +1,11 @@
 return {
     {
         "NvChad/nvterm",
+        lazy = false,
         config = function()
             require("nvterm").setup({
                 terminals = {
-                    shell = "pwsh"
+                    shell = "powershell.exe"
                 }
             })
 

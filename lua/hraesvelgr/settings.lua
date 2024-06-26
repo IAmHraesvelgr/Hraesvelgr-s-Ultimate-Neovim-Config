@@ -16,7 +16,7 @@ vim.opt.scrolloff = 8
 
 vim.opt.updatetime = 50
 
-vim.o.shell = "powershell"
+vim.o.shell = "powershell.exe"
 
 vim.opt.termguicolors = true
 
