@@ -39,8 +39,8 @@ return {
                     },
                 },
             })
-            -- vim.cmd.colorscheme "catppuccin-mocha"
-            -- vim.cmd [[syntax enable]]
+            vim.cmd.colorscheme "catppuccin-mocha"
+            vim.cmd [[syntax enable]]
         end
     }
 }
