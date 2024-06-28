@@ -3,11 +3,7 @@ return {
         "NvChad/nvterm",
         lazy = false,
         config = function()
-            require("nvterm").setup({
-                terminals = {
-                    shell = "powershell.exe"
-                }
-            })
+            require("nvterm").setup()
 
             vim.keymap.set('n', '<A-h>', function() require('nvterm.terminal').toggle('horizontal') end)
             vim.keymap.set('n', '<A-v>', function() require('nvterm.terminal').toggle('vertical') end)
