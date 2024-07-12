@@ -3,7 +3,6 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000,
-        event = "VeryLazy",
         config = function()
             require('catppuccin').setup({
                 transparent_background = true,
