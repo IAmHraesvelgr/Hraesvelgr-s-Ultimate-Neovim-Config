@@ -1,9 +1,11 @@
 return {
     {
         "NvChad/nvterm",
-        lazy = false,
+        event = "VeryLazy",
         config = function()
-            require("nvterm").setup()
+            require("nvterm").setup({
+                shell = vim.o.shell
+            })
 
             vim.keymap.set('n', '<A-h>', function() require('nvterm.terminal').toggle('horizontal') end)
             vim.keymap.set('n', '<A-v>', function() require('nvterm.terminal').toggle('vertical') end)
