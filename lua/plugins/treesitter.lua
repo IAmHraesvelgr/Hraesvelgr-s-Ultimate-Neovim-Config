@@ -9,7 +9,10 @@ return {
             configs.setup({
                 ensure_installed = { 'lua' },
                 sync_install = true,
-                highlight = { enable = true },
+                highlight = {
+                    enable = true,
+                    use_languagetree = true
+                },
                 indent = { enable = true },
             })
 
