@@ -4,7 +4,7 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            require('tokyonight').setup({
+            require("tokyonight").setup({
                 style = "night",
                 transparent = false,
                 terminal_colors = true,
@@ -17,9 +17,8 @@ return {
                     floats = "dark",
                 },
             })
-            
-        vim.cmd('colorscheme tokyonight')
-        end
 
+            vim.cmd("colorscheme tokyonight")
+        end,
     },
 }

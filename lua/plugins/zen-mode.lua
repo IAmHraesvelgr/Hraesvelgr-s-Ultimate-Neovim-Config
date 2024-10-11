@@ -4,7 +4,7 @@ return {
         event = "VeryLazy",
         opts = {},
         config = function()
-            vim.keymap.set('n', '<leader>zm', vim.cmd.ZenMode)
-        end
+            vim.keymap.set("n", "<leader>zm", vim.cmd.ZenMode)
+        end,
     },
 }

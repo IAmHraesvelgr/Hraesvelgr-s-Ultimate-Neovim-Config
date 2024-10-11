@@ -1,10 +1,10 @@
 return {
     {
-        'catppuccin/nvim',
-        name = 'catppuccin',
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
         config = function()
-            require('catppuccin').setup({
+            require("catppuccin").setup({
                 flavour = "mocha",
                 transparent_background = true,
                 no_italic = true,
@@ -17,22 +17,22 @@ return {
                     treesitter = true,
                     notify = true,
                     indent_blankline = {
-                        enabled = true
+                        enabled = true,
                     },
                     mason = true,
                     noice = true,
                     telescope = {
                         enabled = true,
-                        style = "nvchad"
+                        style = "nvchad",
                     },
                     dropbar = {
                         enabled = true,
-                        color_mode = true
-                    }
+                        color_mode = true,
+                    },
                 },
             })
 
             -- vim.cmd.colorscheme('catppuccin')
-        end
-    }
+        end,
+    },
 }

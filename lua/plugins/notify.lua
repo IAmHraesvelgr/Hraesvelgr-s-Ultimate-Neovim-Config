@@ -6,9 +6,9 @@ return {
             require("notify").setup({
                 stages = "fade",
                 render = "compact",
-                background_colour = 'FloatShadow'
+                background_colour = "FloatShadow",
             })
             vim.notify = require("notify")
-        end
+        end,
     },
 }

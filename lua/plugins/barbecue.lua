@@ -9,11 +9,11 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require('barbecue').setup({
-                theme = "tokyonight"
+            require("barbecue").setup({
+                theme = "tokyonight",
             })
 
-            require('barbecue.ui').toggle(true)
-        end
-    }
+            require("barbecue.ui").toggle(true)
+        end,
+    },
 }

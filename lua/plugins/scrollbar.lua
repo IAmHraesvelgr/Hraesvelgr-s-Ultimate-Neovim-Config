@@ -4,6 +4,6 @@ return {
         event = "VeryLazy",
         config = function()
             require("scrollbar").setup()
-        end
+        end,
     },
 }

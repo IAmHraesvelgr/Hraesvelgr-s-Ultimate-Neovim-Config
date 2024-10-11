@@ -1,6 +1,6 @@
 return {
     {
         "j-hui/fidget.nvim",
-        event = "VeryLazy"
+        event = "VeryLazy",
     },
 }
