@@ -2,21 +2,6 @@ return {
     {
         {
             "williamboman/mason.nvim",
-            opts = {
-                ensure_installed = {
-                    "html-lsp",
-                    "css-lsp",
-                    "typescript-language-server",
-                    "prettier",
-                    "pyright",
-                    "black",
-                    "clangd",
-                    "cmake-language-server",
-                    "csharp-language-server",
-                    "lua-language-server",
-                    "stylua",
-                },
-            },
             config = function()
                 require("mason").setup({
                     ui = {
@@ -42,8 +27,24 @@ return {
                 })
             end,
         },
-        { "williamboman/mason-lspconfig.nvim" },
-        { "VonHeikemen/lsp-zero.nvim",        branch = "v3.x" },
+        {
+            "williamboman/mason-lspconfig.nvim",
+            config = function()
+                require("mason-lspconfig").setup({
+                    ensure_installed = {
+                        "html",
+                        "cssls",
+                        "ts_ls",
+                        "pyright",
+                        "clangd",
+                        "cmake",
+                        "csharp_ls",
+                        "lua_ls",
+                    },
+                })
+            end,
+        },
+        { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
         { "neovim/nvim-lspconfig" },
         { "hrsh7th/cmp-nvim-lsp" },
         { "hrsh7th/nvim-cmp" },
