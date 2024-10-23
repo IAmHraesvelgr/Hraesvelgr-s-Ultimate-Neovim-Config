@@ -46,6 +46,4 @@ return {
             })
         end,
     },
-    { "jnurmine/Zenburn" },
-    { "RRethy/base16-nvim" },
 }
