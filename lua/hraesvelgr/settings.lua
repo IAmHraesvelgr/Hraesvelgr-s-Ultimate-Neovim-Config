@@ -25,3 +25,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 vim.opt.undofile = true
+
+vim.cmd("set cmdheight=0")
+
+vim.cmd("set guicursor=n-v-c:block-blinkon1,i-ci:ver25")
