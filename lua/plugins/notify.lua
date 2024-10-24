@@ -4,8 +4,8 @@ return {
         event = "VeryLazy",
         config = function()
             require("notify").setup({
-                stages = "fade",
-                render = "compact",
+                stages = "fade_in_slide_out",
+                render = "simple",
                 background_colour = "FloatShadow",
             })
             vim.notify = require("notify")
