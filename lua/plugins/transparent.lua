@@ -1,5 +1,8 @@
 return {
     {
-        "xiyaowong/transparent.nvim"
+        "xiyaowong/transparent.nvim",
+        config = function ()
+            vim.cmd.TransparentEnable()
+        end
     }
 }
