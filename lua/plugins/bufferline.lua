@@ -12,6 +12,12 @@ return {
                     },
                     mode = "buffers",
                     themeable = true,
+                    custom_filter = function (buf_number)
+                        if vim.fn.bufname(buf_number) == '' then
+                            return false
+                        end
+                        return true
+                    end
                 },
             })
 
