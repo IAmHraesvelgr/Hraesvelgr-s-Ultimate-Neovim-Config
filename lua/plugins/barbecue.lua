@@ -10,7 +10,7 @@ return {
         },
         config = function()
             require("barbecue").setup({
-                theme = "tokyonight",
+                theme = "catppuccin",
             })
 
             require("barbecue.ui").toggle(true)
