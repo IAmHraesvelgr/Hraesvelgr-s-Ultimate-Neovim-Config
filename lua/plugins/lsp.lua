@@ -44,13 +44,9 @@ return {
                 })
             end,
         },
-        { 
-            "neovim/nvim-lspconfig",
-            config = function()
-                require("hraesvelgr.lspconfig")
-            end
-        },
+        { "neovim/nvim-lspconfig" },
         { "hrsh7th/cmp-nvim-lsp" },
+        { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
         { "hrsh7th/nvim-cmp" },
         { "L3MON4D3/LuaSnip" },
         event = "VeryLazy",
