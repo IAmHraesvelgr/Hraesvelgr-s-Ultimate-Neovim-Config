@@ -4,7 +4,7 @@ return {
         event = "VeryLazy",
         config = function()
             require("nvterm").setup({
-                shell = vim.o.shell,
+                shell = "pwsh",
             })
 
             vim.keymap.set("n", "<A-h>", function()
