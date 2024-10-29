@@ -19,6 +19,7 @@ M.ui = {
     },
     extended_integrations = {
         "trouble",
+        "noice"
     },
 }
 
