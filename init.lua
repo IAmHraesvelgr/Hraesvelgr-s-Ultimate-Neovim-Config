@@ -20,6 +20,5 @@ require("lazy").setup("plugins", { install = { colorscheme = { "nvchad" } } })
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 dofile(vim.g.base46_cache .. "syntax")
-dofile(vim.g.base46_cache .. "nvimtree")
 
 require('hraesvelgr')
