@@ -26,4 +26,6 @@ vim.opt.backup = false
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 vim.opt.undofile = true
 
-vim.cmd("set cmdheight=0")
+vim.o.cmdheight = 0
+
+vim.o.laststatus = 2
