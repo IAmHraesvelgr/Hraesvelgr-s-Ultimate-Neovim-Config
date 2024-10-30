@@ -27,4 +27,11 @@ M.nvdash = {
 	load_on_startup = true,
 }
 
+M.colorify = {
+	enabled = true,
+	mode = "virtual",
+	virt_text = "󱓻 ",
+	highlight = { hex = true, lspvars = true },
+}
+
 return M
