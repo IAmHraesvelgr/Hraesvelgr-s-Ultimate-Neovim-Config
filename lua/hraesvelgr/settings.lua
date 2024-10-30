@@ -28,4 +28,4 @@ vim.opt.undofile = true
 
 vim.o.cmdheight = 0
 
-vim.o.laststatus = 2
+vim.o.laststatus = 3
