@@ -1,5 +1,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.o.numberwidth = 2
+vim.o.ruler = false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -13,7 +15,7 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 vim.o.shell = "pwsh"
 
