@@ -2,10 +2,10 @@ local map = vim.keymap.set
 
 -- Split View
 map("n", "<leader>hs", function()
-    vim.cmd("split")
+	vim.cmd("split")
 end)
 map("n", "<leader>vs", function()
-    vim.cmd("vsplit")
+	vim.cmd("vsplit")
 end)
 
 -- NvimTree
