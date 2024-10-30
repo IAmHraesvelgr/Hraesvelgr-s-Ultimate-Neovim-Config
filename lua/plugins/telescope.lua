@@ -5,7 +5,6 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         event = "VeryLazy",
         config = function()
-            vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
             require("telescope").setup({
                 defaults = {
                     vimgrep_arguments = {

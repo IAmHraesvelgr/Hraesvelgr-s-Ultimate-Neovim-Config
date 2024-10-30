@@ -1,6 +1,19 @@
-vim.keymap.set("n", "<leader>hs", function()
+local map = vim.keymap.set
+
+-- Split View
+map("n", "<leader>hs", function()
     vim.cmd("split")
 end)
-vim.keymap.set("n", "<leader>vs", function()
+map("n", "<leader>vs", function()
     vim.cmd("vsplit")
 end)
+
+-- NvimTree
+map("n", "<leader>et", vim.cmd.NvimTreeToggle)
+map("n", "<leader>ee", vim.cmd.NvimTreeFocus)
+
+-- Telescope
+map("n", "<leader>ff", require("telescope.builtin").find_files, {})
+
+-- Zen Mode
+map("n", "<leader>zm", vim.cmd.ZenMode)
