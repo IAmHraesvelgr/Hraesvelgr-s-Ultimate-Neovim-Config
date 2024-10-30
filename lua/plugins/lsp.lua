@@ -2,6 +2,7 @@ return {
     {
         {
             "williamboman/mason.nvim",
+            event = "VeryLazy",
             config = function()
                 require("mason").setup({
                     ui = {
@@ -44,11 +45,26 @@ return {
                 })
             end,
         },
-        { "neovim/nvim-lspconfig" },
-        { "hrsh7th/cmp-nvim-lsp" },
-        { "hrsh7th/cmp-nvim-lua" },
-        { "hrsh7th/cmp-buffer" },
-        { "hrsh7th/cmp-path" },
+        {
+            "neovim/nvim-lspconfig",
+            event = "User FilePost",
+        },
+        {
+            "hrsh7th/cmp-nvim-lsp",
+            event = "InsertEnter"
+        },
+        {
+            "hrsh7th/cmp-nvim-lua",
+            event = "InsertEnter"
+        },
+        {
+            "hrsh7th/cmp-buffer",
+            event = "InsertEnter"
+        },
+        {
+            "hrsh7th/cmp-path",
+            event = "InsertEnter"
+        },
         {
             "hrsh7th/nvim-cmp",
             event = "InsertEnter",
@@ -58,16 +74,15 @@ return {
         },
         {
             "L3MON4D3/LuaSnip",
+            event = "InsertEnter",
             dependencies = { "rafamadriz/friendly-snippets" },
             config = function()
                 require("luasnip.loaders.from_vscode").lazy_load { exclude = vim.g.vscode_snippets_exclude or {} }
                 require("luasnip.loaders.from_vscode").lazy_load { paths = vim.g.vscode_snippets_path or "" }
 
-                -- snipmate format
                 require("luasnip.loaders.from_snipmate").load()
                 require("luasnip.loaders.from_snipmate").lazy_load { paths = vim.g.snipmate_snippets_path or "" }
 
-                -- lua format
                 require("luasnip.loaders.from_lua").load()
                 require("luasnip.loaders.from_lua").lazy_load { paths = vim.g.lua_snippets_path or "" }
 
