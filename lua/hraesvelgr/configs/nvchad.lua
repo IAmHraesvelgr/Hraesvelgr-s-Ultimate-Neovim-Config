@@ -42,3 +42,8 @@ end)
 map("n", "<leader>th", function()
 	require("nvchad.themes").open()
 end)
+
+-- Rename
+map("n", "<leader>rr", function()
+	require("nvchad.lsp.renamer")()
+end)
