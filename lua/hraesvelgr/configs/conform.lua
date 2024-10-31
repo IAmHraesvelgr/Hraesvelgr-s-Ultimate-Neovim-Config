@@ -7,7 +7,7 @@ local options = {
 		c = { "clang-format" },
 		cpp = { "clang-format " },
 		python = { "black" },
-		go = { "gofmt" },
+		go = { "gofumpt" },
 	},
 	format_on_save = {
 		timeout_ms = 250,
