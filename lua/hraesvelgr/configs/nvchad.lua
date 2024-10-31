@@ -27,11 +27,11 @@ map({ "n", "t" }, "<A-i>", function()
 end)
 
 map({ "n", "t" }, "<A-h>", function()
-	require("nvchad.term").toggle({ pos = "sp", id = "spTerm" })
+	require("nvchad.term").toggle({ pos = "bo sp", id = "spTerm" })
 end)
 
 map({ "n", "t" }, "<A-v>", function()
-	require("nvchad.term").toggle({ pos = "vsp", id = "vspTerm" })
+	require("nvchad.term").toggle({ pos = "bo vsp", id = "vspTerm" })
 end)
 
 -- Themes
