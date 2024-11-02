@@ -17,3 +17,7 @@ map("n", "<leader>ff", require("telescope.builtin").find_files, {})
 
 -- Zen Mode
 map("n", "<leader>zm", vim.cmd.ZenMode)
+
+-- Comment
+map("n", "<leader>cc", "gcc", { desc = "toggle comment", remap = true })
+map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
