@@ -10,7 +10,7 @@ local options = {
 		go = { "gofumpt" },
 	},
 	format_on_save = {
-		timeout_ms = 250,
+		timeout_ms = 5000,
 		lsp_fallback = true,
 	},
 }
