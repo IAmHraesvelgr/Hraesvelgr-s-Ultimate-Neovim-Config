@@ -1,9 +1,8 @@
 return {
-	{
-		"nvimtools/none-ls.nvim",
-		event = "VeryLazy",
-		opts = function()
-			require("hraesvelgr.configs.none-ls")
-		end,
-	},
+  {
+    "nvimtools/none-ls.nvim",
+    config = function()
+      require("hraesvelgr.configs.none-ls")
+    end,
+  },
 }
