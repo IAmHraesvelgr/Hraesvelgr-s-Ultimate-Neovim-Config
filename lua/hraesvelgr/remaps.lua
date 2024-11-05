@@ -22,7 +22,7 @@ map("n", "<leader>zm", vim.cmd.ZenMode)
 map("n", "<leader>cc", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
 
--- Conform
+-- Formatting
 map("n", "<leader>fm", function()
-	require("conform").format()
+	vim.lsp.buf.format()
 end)

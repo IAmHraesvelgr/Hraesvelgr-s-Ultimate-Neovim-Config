@@ -9,7 +9,7 @@ M.ui = {
     theme = "vscode_colored",
   },
   cmp = {
-    style = "flat_dark",
+    style = "default",
   },
   telescope = {
     style = "borderless",
