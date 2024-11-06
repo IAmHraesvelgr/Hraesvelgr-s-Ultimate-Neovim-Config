@@ -16,6 +16,7 @@ return {
 					"clang-format",
 					"gofumpt",
 					"isort",
+					"prettier",
 					"stylua",
 				},
 			})
