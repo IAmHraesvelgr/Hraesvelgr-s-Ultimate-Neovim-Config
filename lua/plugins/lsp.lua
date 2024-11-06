@@ -33,14 +33,15 @@ return {
 			config = function()
 				require("mason-lspconfig").setup({
 					ensure_installed = {
-						"html",
-						"cssls",
-						"ts_ls",
-						"pyright",
 						"clangd",
 						"cmake",
 						"csharp_ls",
+						"cssls",
+						"gopls",
+						"html",
 						"lua_ls",
+						"pyright",
+						"ts_ls",
 					},
 				})
 			end,

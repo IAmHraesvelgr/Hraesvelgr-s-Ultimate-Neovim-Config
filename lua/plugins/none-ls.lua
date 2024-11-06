@@ -1,8 +1,24 @@
 return {
-  {
-    "nvimtools/none-ls.nvim",
-    config = function()
-      require("hraesvelgr.configs.none-ls")
-    end,
-  },
+	{
+		"nvimtools/none-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("hraesvelgr.configs.none-ls")
+		end,
+	},
+	{
+		"jay-babu/mason-null-ls.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("mason-null-ls").setup({
+				ensure_installed = {
+					"black",
+					"clang-format",
+					"gofumpt",
+					"isort",
+					"stylua",
+				},
+			})
+		end,
+	},
 }
