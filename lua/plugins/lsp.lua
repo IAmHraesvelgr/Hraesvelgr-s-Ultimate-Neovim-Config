@@ -98,7 +98,5 @@ return {
 				})
 			end,
 		},
-		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-		event = "VeryLazy",
 	},
 }

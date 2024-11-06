@@ -1,30 +1,84 @@
-local lsp = require("lsp-zero")
-lsp.preset("recommended")
+local M = {}
+local map = vim.keymap.set
 
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		client.server_capabilities.semanticTokensProvider = nil
-	end,
-})
+-- export on_attach & capabilities
+M.on_attach = function(_, bufnr)
+  local function opts(desc)
+    return { buffer = bufnr, desc = "LSP " .. desc }
+  end
 
-lsp.set_preferences({
-	sign_icons = {},
-})
+  map("n", "gD", vim.lsp.buf.declaration, opts "Go to declaration")
+  map("n", "gd", vim.lsp.buf.definition, opts "Go to definition")
+  map("n", "gi", vim.lsp.buf.implementation, opts "Go to implementation")
+  map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "Show signature help")
+  map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts "Add workspace folder")
+  map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts "Remove workspace folder")
 
-lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({ buffer = bufnr })
-end)
+  map("n", "<leader>wl", function()
+    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  end, opts "List workspace folders")
 
-lsp.setup()
+  map("n", "<leader>D", vim.lsp.buf.type_definition, opts "Go to type definition")
+  map("n", "<leader>ra", require "nvchad.lsp.renamer", opts "NvRenamer")
 
-vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
+  map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts "Code action")
+  map("n", "gr", vim.lsp.buf.references, opts "Show references")
+end
 
-require("mason").setup({})
-require("mason-lspconfig").setup({
-	handlers = {
-		function(server_name)
-			require("lspconfig")[server_name].setup({})
-		end,
-	},
-})
+-- disable semanticTokens
+M.on_init = function(client, _)
+  if client.supports_method "textDocument/semanticTokens" then
+    client.server_capabilities.semanticTokensProvider = nil
+  end
+end
+
+M.capabilities = vim.lsp.protocol.make_client_capabilities()
+
+M.capabilities.textDocument.completion.completionItem = {
+  documentationFormat = { "markdown", "plaintext" },
+  snippetSupport = true,
+  preselectSupport = true,
+  insertReplaceSupport = true,
+  labelDetailsSupport = true,
+  deprecatedSupport = true,
+  commitCharactersSupport = true,
+  tagSupport = { valueSet = { 1 } },
+  resolveSupport = {
+    properties = {
+      "documentation",
+      "detail",
+      "additionalTextEdits",
+    },
+  },
+}
+
+M.defaults = function()
+  require("nvchad.lsp").diagnostic_config()
+
+  require("lspconfig").lua_ls.setup {
+    on_attach = M.on_attach,
+    capabilities = M.capabilities,
+    on_init = M.on_init,
+
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+        workspace = {
+          library = {
+            vim.fn.expand "$VIMRUNTIME/lua",
+            vim.fn.expand "$VIMRUNTIME/lua/vim/lsp",
+            vim.fn.stdpath "data" .. "/lazy/ui/nvchad_types",
+            vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy",
+            "${3rd}/luv/library",
+          },
+          maxPreload = 100000,
+          preloadFileSize = 10000,
+        },
+      },
+    },
+  }
+end
+
+return M
