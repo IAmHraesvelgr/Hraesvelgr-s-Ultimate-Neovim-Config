@@ -17,8 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", { install = { colorscheme = { "nvchad" } } })
 
-for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
-	dofile(vim.g.base46_cache .. v)
-end
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
+dofile(vim.g.base46_cache .. "tbline")
 
 require("hraesvelgr")

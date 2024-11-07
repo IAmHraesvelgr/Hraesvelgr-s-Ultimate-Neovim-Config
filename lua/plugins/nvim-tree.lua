@@ -1,8 +1,17 @@
 return {
 	{
 		"nvim-tree/nvim-tree.lua",
-		dependencies = "nvim-tree/nvim-web-devicons",
+		dependencies = {
+			{
+				"nvim-tree/nvim-web-devicons",
+				config = function()
+					dofile(vim.g.base46_cache .. "devicons")
+				end,
+			},
+		},
 		config = function()
+			dofile(vim.g.base46_cache .. "nvimtree")
+
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
 

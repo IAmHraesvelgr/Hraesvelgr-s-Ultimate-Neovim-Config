@@ -4,6 +4,8 @@ return {
 			"williamboman/mason.nvim",
 			event = "VeryLazy",
 			config = function()
+				dofile(vim.g.base46_cache .. "mason")
+
 				require("mason").setup({
 					ui = {
 						icons = {
@@ -49,6 +51,9 @@ return {
 		{
 			"neovim/nvim-lspconfig",
 			event = "User FilePost",
+			config = function()
+				require("hraesvelgr.configs.lsp").defaults()
+			end,
 		},
 		{
 			"hrsh7th/cmp-nvim-lsp",

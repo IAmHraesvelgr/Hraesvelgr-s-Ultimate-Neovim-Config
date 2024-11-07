@@ -5,6 +5,8 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		event = "VeryLazy",
 		config = function()
+			dofile(vim.g.base46_cache .. "telescope")
+
 			require("telescope").setup({
 				defaults = {
 					prompt_prefix = "   ",

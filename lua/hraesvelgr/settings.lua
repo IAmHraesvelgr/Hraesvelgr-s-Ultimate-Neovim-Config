@@ -1,35 +1,53 @@
-vim.opt.guicursor = ""
+local opt = vim.opt
+local o = vim.o
+local g = vim.g
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.o.numberwidth = 2
-vim.o.ruler = false
+o.laststatus = 3
+o.showmode = false
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+o.clipboard = "unnamedplus"
+o.cursorline = true
+o.cursorlineopt = "number"
 
-vim.opt.smartindent = true
+o.expandtab = true
+o.shiftwidth = 2
+o.smartindent = true
+o.tabstop = 2
+o.softtabstop = 2
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+opt.fillchars = { eob = " " }
+o.ignorecase = true
+o.smartcase = true
 
-vim.opt.scrolloff = 8
+o.number = true
+o.relativenumber = true
+o.numberwidth = 2
+o.ruler = false
 
-vim.opt.updatetime = 250
+opt.shortmess:append("sI")
 
-vim.o.shell = "pwsh"
+o.signcolumn = "yes"
+o.splitbelow = true
+o.splitright = true
+o.timeoutlen = 400
+o.undofile = true
 
-vim.opt.termguicolors = true
+o.updatetime = 250
 
-vim.opt.fillchars = { eob = " " }
+opt.whichwrap:append("<>[]hl")
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
-vim.opt.undofile = true
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
 
-vim.o.cmdheight = 0
+opt.hlsearch = false
+opt.incsearch = true
 
-vim.o.laststatus = 3
+o.shell = "pwsh"
+
+opt.termguicolors = true
+
+opt.swapfile = false
+opt.backup = false
+opt.undodir = vim.fn.stdpath("data") .. "/undodir"

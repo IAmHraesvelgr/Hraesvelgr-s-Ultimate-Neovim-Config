@@ -53,6 +53,8 @@ M.capabilities.textDocument.completion.completionItem = {
 }
 
 M.defaults = function()
+	dofile(vim.g.base46_cache .. "lsp")
+
 	require("nvchad.lsp").diagnostic_config()
 
 	require("lspconfig").lua_ls.setup({
