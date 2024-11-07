@@ -10,6 +10,7 @@ M.ui = {
 	},
 	cmp = {
 		style = "flat_dark",
+		icons_left = true,
 	},
 	telescope = {
 		style = "borderless",

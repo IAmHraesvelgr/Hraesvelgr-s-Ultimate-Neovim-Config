@@ -4,8 +4,6 @@ return {
 			"williamboman/mason.nvim",
 			event = "VeryLazy",
 			config = function()
-				dofile(vim.g.base46_cache .. "mason")
-
 				require("mason").setup({
 					ui = {
 						icons = {

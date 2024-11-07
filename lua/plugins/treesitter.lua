@@ -1,23 +1,14 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
-		config = function()
-			dofile(vim.g.base46_cache .. "syntax")
-			dofile(vim.g.base46_cache .. "treesitter")
-
-			local configs = require("nvim-treesitter.configs")
-
-			configs.setup({
-				auto_install = true,
-				sync_install = true,
-				highlight = {
-					enable = true,
-					use_languagetree = true,
-				},
-				indent = { enable = true },
-			})
+		cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+		build = ":TSUpdate",
+		opts = function()
+			return require("hraesvelgr.configs.treesitter")
+		end,
+		config = function(_, opts)
+			require("nvim-treesitter.configs").setup(opts)
 		end,
 	},
 }

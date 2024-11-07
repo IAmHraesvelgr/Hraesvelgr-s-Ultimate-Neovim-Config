@@ -14,5 +14,21 @@ return {
 		end,
 	},
 
-	"nvchad/volt",
+	{
+		"nvchad/volt",
+		lazy = true,
+	},
+
+	{
+		"siduck/showkeys",
+		cmd = "ShowkeysToggle",
+		opts = {
+			timeout = 1,
+			maxkeys = 5,
+		},
+	},
+	{
+		"nvzone/menu",
+		lazy = true,
+	},
 }

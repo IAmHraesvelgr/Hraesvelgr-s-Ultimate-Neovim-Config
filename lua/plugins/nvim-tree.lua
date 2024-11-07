@@ -9,15 +9,11 @@ return {
 					return { override = require("nvchad.icons.devicons") }
 				end,
 				config = function(_, opts)
-					dofile(vim.g.base46_cache .. "devicons")
-
 					require("nvim-web-devicons").setup(opts)
 				end,
 			},
 		},
 		config = function()
-			dofile(vim.g.base46_cache .. "nvimtree")
-
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
 
