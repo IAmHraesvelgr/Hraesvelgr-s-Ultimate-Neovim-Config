@@ -18,7 +18,6 @@ M.ui = {
 		theme = "grid",
 	},
 	extended_integrations = {
-		"trouble",
 		"noice",
 	},
 }
