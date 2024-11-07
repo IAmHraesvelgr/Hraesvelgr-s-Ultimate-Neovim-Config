@@ -27,8 +27,4 @@ return {
 			maxkeys = 5,
 		},
 	},
-	{
-		"nvzone/menu",
-		lazy = true,
-	},
 }

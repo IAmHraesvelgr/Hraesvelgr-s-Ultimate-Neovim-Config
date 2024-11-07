@@ -31,17 +31,3 @@ end)
 map("n", "<leader>sk", function()
 	vim.cmd.ShowkeysToggle()
 end)
-
-map("n", "<leader>mm", function()
-	require("menu").open("default", {
-		mouse = false,
-		border = true,
-	})
-end)
-
-vim.keymap.set("n", "<leader>me", function()
-	vim.cmd.exec('"normal! \\<RightMouse>"')
-
-	local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
-	require("menu").open(options, { mouse = false })
-end, {})
