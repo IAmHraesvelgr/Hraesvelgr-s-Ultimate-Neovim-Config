@@ -32,5 +32,5 @@ null_ls.setup({
 			})
 		end
 	end,
-	timeout_ms = 2500,
+	timeout_ms = 5000,
 })
