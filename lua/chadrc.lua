@@ -6,7 +6,7 @@ M.base46 = {
 
 M.ui = {
 	statusline = {
-		theme = "default",
+		theme = "vscode_colored",
 	},
 	cmp = {
 		style = "flat_dark",
