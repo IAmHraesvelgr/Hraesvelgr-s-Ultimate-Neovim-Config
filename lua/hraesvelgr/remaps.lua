@@ -26,8 +26,3 @@ map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
 map("n", "<leader>fm", function()
 	vim.lsp.buf.format()
 end)
-
--- Volt Plugins
-map("n", "<leader>sk", function()
-	vim.cmd.ShowkeysToggle()
-end)
