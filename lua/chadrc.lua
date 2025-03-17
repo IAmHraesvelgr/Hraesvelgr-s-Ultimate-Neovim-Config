@@ -7,6 +7,7 @@ M.base46 = {
 M.ui = {
 	statusline = {
 		theme = "default",
+		separator_style = "default",
 	},
 	cmp = {
 		style = "flat_dark",
@@ -20,8 +21,6 @@ M.ui = {
 	},
 	extended_integrations = {
 		"trouble",
-		"noice",
-		"notify",
 	},
 }
 
