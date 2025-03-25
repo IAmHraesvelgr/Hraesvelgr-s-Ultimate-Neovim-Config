@@ -10,11 +10,11 @@ M.ui = {
 		separator_style = "default",
 	},
 	cmp = {
-		style = "flat_dark",
+		style = "default",
 		icons_left = true,
 	},
 	telescope = {
-		style = "borderless",
+		style = "bordered",
 	},
 	cheatsheet = {
 		theme = "grid",

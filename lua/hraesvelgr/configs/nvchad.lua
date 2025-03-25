@@ -40,7 +40,7 @@ map("n", "<leader>ts", function()
 end)
 
 map("n", "<leader>th", function()
-	require("nvchad.themes").open({ border = true })
+	require("nvchad.themes").open({ style = "bordered" })
 end)
 
 -- Rename

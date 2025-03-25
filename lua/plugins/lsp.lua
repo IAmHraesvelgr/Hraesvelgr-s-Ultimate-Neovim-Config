@@ -35,7 +35,7 @@ return {
 					ensure_installed = {
 						"clangd",
 						"cmake",
-						"csharp_ls",
+						"omnisharp",
 						"cssls",
 						"gopls",
 						"html",
@@ -75,6 +75,9 @@ return {
 			opts = function()
 				return require("hraesvelgr.configs.cmp")
 			end,
+		},
+		{
+			"saadparwaiz1/cmp_luasnip",
 		},
 		{
 			"L3MON4D3/LuaSnip",
