@@ -29,24 +29,6 @@ return {
 			end,
 		},
 		{
-			"williamboman/mason-lspconfig.nvim",
-			config = function()
-				require("mason-lspconfig").setup({
-					ensure_installed = {
-						"clangd",
-						"cmake",
-						"omnisharp",
-						"cssls",
-						"gopls",
-						"html",
-						"lua_ls",
-						"pyright",
-						"ts_ls",
-					},
-				})
-			end,
-		},
-		{
 			"neovim/nvim-lspconfig",
 			event = "User FilePost",
 			config = function()
