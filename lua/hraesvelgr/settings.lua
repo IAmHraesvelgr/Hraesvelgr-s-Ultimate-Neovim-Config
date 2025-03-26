@@ -55,5 +55,4 @@ opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 -- Performance
 opt.mouse = ""
 opt.ttyfast = true
-opt.lazyredraw = true
 opt.regexpengine = 1
