@@ -2,6 +2,7 @@ local configs = require("hraesvelgr.configs.lsp")
 local on_attach = configs.on_attach
 local on_init = configs.on_init
 local capabilities = configs.capabilities
+local defaults = configs.defaults
 
 local lspconfig = require("lspconfig")
 
@@ -16,5 +17,6 @@ for _, lsp in ipairs(servers) do
 			on_attach()
 		end,
 		capabilities = capabilities,
+		defaults = defaults,
 	})
 end
