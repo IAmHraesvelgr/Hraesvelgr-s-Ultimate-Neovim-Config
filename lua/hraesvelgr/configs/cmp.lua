@@ -50,6 +50,10 @@ local options = {
 		{ name = "nvim_lua" },
 		{ name = "path" },
 	},
+
+	experimental = {
+		ghost_text = true,
+	},
 }
 
 return vim.tbl_deep_extend("force", options, require("nvchad.cmp"))
