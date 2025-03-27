@@ -2,7 +2,6 @@ return {
 	{
 		{
 			"williamboman/mason.nvim",
-			event = "VeryLazy",
 			config = function()
 				require("mason").setup({
 					ui = {
@@ -23,7 +22,6 @@ return {
 							cancel_installation = "<C-c>",
 						},
 					},
-
 					max_concurrent_installers = 10,
 				})
 			end,
