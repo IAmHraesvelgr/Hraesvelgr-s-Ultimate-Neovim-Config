@@ -27,13 +27,6 @@ return {
 			end,
 		},
 		{
-			"neovim/nvim-lspconfig",
-			event = "User FilePost",
-			config = function()
-				require("hraesvelgr.configs.lsp").defaults()
-			end,
-		},
-		{
 			"hrsh7th/cmp-nvim-lsp",
 			event = "InsertEnter",
 		},
