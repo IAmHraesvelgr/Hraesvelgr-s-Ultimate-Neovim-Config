@@ -52,8 +52,6 @@ opt.swapfile = false
 opt.backup = false
 opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 
-o.winborder = "rounded"
-
 -- Performance
 opt.mouse = ""
 opt.ttyfast = true
