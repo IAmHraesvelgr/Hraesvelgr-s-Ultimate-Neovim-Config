@@ -21,6 +21,7 @@ return {
 
 	{
 		"siduck/showkeys",
+		lazy = true,
 		cmd = "ShowkeysToggle",
 		opts = {
 			timeout = 1,
