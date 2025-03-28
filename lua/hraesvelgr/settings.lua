@@ -54,6 +54,11 @@ opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 
 opt.smoothscroll = true
 
+vim.diagnostic.config({
+	virtual_text = false,
+	virtual_lines = true,
+})
+
 -- Performance
 opt.mouse = ""
 opt.ttyfast = true
