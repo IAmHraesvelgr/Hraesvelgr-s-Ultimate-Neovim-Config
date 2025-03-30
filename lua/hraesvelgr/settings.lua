@@ -56,7 +56,9 @@ opt.smoothscroll = true
 
 vim.diagnostic.config({
 	virtual_text = false,
-	virtual_lines = true,
+	virtual_lines = {
+		current_line = true,
+	},
 })
 
 -- Performance
