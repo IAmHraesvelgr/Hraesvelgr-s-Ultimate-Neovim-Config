@@ -9,7 +9,7 @@ M.ui = {
 		theme = "vscode_colored",
 	},
 	cmp = {
-		style = "flat",
+		style = "flat_dark",
 		icons_left = true,
 	},
 	telescope = {
