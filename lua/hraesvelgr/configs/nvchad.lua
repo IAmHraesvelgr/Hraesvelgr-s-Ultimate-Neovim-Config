@@ -52,3 +52,8 @@ end)
 map("n", "<leader>sk", function()
 	vim.cmd.ShowkeysToggle()
 end)
+
+-- Cheatsheet
+map("n", "<leader>ch", function()
+	vim.cmd.NvCheatsheet()
+end)

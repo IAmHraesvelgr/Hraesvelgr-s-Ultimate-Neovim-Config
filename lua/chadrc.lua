@@ -6,11 +6,10 @@ M.base46 = {
 
 M.ui = {
 	statusline = {
-		theme = "default",
-		separator_style = "default",
+		theme = "vscode_colored",
 	},
 	cmp = {
-		style = "default",
+		style = "flat",
 		icons_left = true,
 	},
 	telescope = {
