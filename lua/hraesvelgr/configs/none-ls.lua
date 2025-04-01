@@ -27,7 +27,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					vim.lsp.buf.format({
-						async = false,
+						async = true,
 						bufnr = bufnr,
 						filter = function()
 							return client.name == "null-ls"

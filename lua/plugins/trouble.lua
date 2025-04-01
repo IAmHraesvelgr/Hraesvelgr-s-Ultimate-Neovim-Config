@@ -1,6 +1,4 @@
 return {
-	{
-		"folke/trouble.nvim",
-		event = "VimEnter",
-	},
+	"folke/trouble.nvim",
+	event = "VimEnter",
 }
