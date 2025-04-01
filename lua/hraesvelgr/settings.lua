@@ -20,7 +20,7 @@ o.ignorecase = true
 o.smartcase = true
 
 o.number = true
-o.relativenumber = false
+o.relativenumber = true
 o.numberwidth = 2
 o.ruler = false
 
