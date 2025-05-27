@@ -18,6 +18,7 @@ null_ls.setup({
 				"-style={BasedOnStyle: Microsoft, PointerAlignment: Left, IndentWidth: 2}",
 			},
 		}),
+		null_ls.builtins.formatting.google_java_format,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
