@@ -15,9 +15,6 @@ map("n", "<leader>ee", vim.cmd.NvimTreeFocus)
 -- Telescope
 map("n", "<leader>ff", require("telescope.builtin").find_files, {})
 
--- Zen Mode
-map("n", "<leader>zm", vim.cmd.ZenMode)
-
 -- Comment
 map("n", "<leader>cc", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
@@ -26,3 +23,9 @@ map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
 map("n", "<leader>fm", function()
 	vim.lsp.buf.format()
 end)
+
+-- Stop bad habits
+map({ "n", "i", "v" }, "<Up>", "<Nop>")
+map({ "n", "i", "v" }, "<Left>", "<Nop>")
+map({ "n", "i", "v" }, "<Right>", "<Nop>")
+map({ "n", "i", "v" }, "<Down>", "<Nop>")
