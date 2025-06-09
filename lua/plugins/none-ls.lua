@@ -17,7 +17,6 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.gofumpt,
-				null_ls.builtins.formatting.csharpier,
 				null_ls.builtins.formatting.clang_format.with({
 					extra_args = {
 						"-style={BasedOnStyle: Microsoft, PointerAlignment: Left, IndentWidth: 2}",
