@@ -6,8 +6,20 @@ local defaults = configs.defaults
 
 local lspconfig = require("lspconfig")
 
-local servers =
-	{ "bashls", "clangd", "cmake", "omnisharp", "cssls", "gopls", "html", "lua_ls", "pyright", "ts_ls", "jdtls" }
+local servers = {
+	"bashls",
+	"clangd",
+	"cmake",
+	"omnisharp",
+	"cssls",
+	"gopls",
+	"html",
+	"lua_ls",
+	"pyright",
+	"ts_ls",
+	"jdtls",
+	"rust_analyzer",
+}
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
