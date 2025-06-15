@@ -43,7 +43,7 @@ for _, lsp in ipairs(servers) do
 				"Sdk:IncludePrereleases=true",
 			},
 		})
-	else
+	elseif lsp == "clangd" then
 		lspconfig[lsp].setup({
 			on_init = on_init,
 			on_attach = function(client)
@@ -51,6 +51,13 @@ for _, lsp in ipairs(servers) do
 				client.server_capabilities.documentRangeFormattingProvider = false
 				on_attach()
 			end,
+			capabilities = capabilities,
+			defaults = defaults,
+		})
+	else
+		lspconfig[lsp].setup({
+			on_init = on_init,
+			on_attach = on_attach(),
 			capabilities = capabilities,
 			defaults = defaults,
 		})
