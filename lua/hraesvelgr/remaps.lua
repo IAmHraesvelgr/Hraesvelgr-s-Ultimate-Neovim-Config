@@ -21,7 +21,7 @@ map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
 
 -- Formatting
 map("n", "<leader>fm", function()
-	vim.lsp.buf.format()
+	require("conform").format()
 end)
 
 -- Stop bad habits
