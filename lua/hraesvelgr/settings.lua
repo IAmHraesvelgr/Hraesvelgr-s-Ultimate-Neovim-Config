@@ -10,10 +10,10 @@ o.cursorline = true
 o.cursorlineopt = "number"
 
 o.expandtab = true
-o.shiftwidth = 2
+o.shiftwidth = 4
 o.smartindent = true
-o.tabstop = 2
-o.softtabstop = 2
+o.tabstop = 4
+o.linebreak = true
 
 opt.fillchars = { eob = " " }
 o.ignorecase = true
@@ -63,5 +63,3 @@ vim.diagnostic.config({
 
 -- Performance
 opt.mouse = ""
-opt.ttyfast = true
-opt.regexpengine = 1
