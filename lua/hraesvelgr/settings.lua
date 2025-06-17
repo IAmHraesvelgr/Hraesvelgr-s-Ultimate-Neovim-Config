@@ -44,8 +44,6 @@ g.loaded_ruby_provider = 0
 opt.hlsearch = false
 opt.incsearch = true
 
-o.shell = "pwsh"
-
 opt.termguicolors = true
 
 opt.swapfile = false
@@ -56,10 +54,6 @@ opt.smoothscroll = true
 
 vim.diagnostic.config({
 	virtual_text = false,
-	-- virtual_lines = {
-	-- 	current_line = true,
-	-- },
 })
 
--- Performance
 opt.mouse = ""
