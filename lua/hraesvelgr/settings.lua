@@ -63,6 +63,5 @@ opt.mouse = ""
 
 g.have_nerd_font = true
 o.inccommand = "split"
-o.cursorline = true
 o.scrolloff = 10
 o.confirm = true
