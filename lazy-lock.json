@@ -21,5 +21,6 @@
   "tiny-code-action.nvim": { "branch": "main", "commit": "747a42be79be802bbe882cc22c2a8d00a6e6a2fd" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "cac10593c4baaacd0f2a1f4d8ba9508667bf3f79" },
   "todo-comments.nvim": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
-  "ui": { "branch": "v3.0", "commit": "c960121b7470c465138177383af364451bb2c102" }
+  "ui": { "branch": "v3.0", "commit": "c960121b7470c465138177383af364451bb2c102" },
+  "volt": { "branch": "main", "commit": "7b8c5e790120d9f08c8487dcb80692db6d2087a1" }
 }
