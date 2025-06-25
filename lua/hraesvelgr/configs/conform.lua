@@ -1,14 +1,16 @@
 local conform = require("conform")
-conform.formatters.black = {
-	args = { "--fast" },
-}
-conform.formatters.clang_format = {
-	args = {
-		"-style={BasedOnStyle: Microsoft, PointerAlignment: Left, IndentWidth: 2}",
-	},
-}
 
 conform.setup({
+	formatters = {
+		black = {
+			args = { "--fast" },
+		},
+		clang_format = {
+			args = {
+				"-style={BasedOnStyle: Microsoft, PointerAlignment: Left, IndentWidth: 2}",
+			},
+		},
+	},
 	format_on_save = {
 		timeout_ms = 5000,
 		lsp_format = "fallback",
