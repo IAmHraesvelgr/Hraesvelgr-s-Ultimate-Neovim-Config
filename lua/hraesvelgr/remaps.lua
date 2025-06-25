@@ -15,7 +15,10 @@ map("n", "<leader>cc", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>cc", "gc", { desc = "toggle comment", remap = true })
 
 map("n", "<leader>fm", function()
-	require("conform").format()
+	require("conform").format({
+		async = true,
+		lsp_fallback = true,
+	})
 end)
 
 map({ "n", "i", "v" }, "<Up>", "<Nop>")

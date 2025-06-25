@@ -3,10 +3,10 @@ local conform = require("conform")
 conform.setup({
 	formatters = {
 		black = {
-			args = { "--fast" },
+			prepend_args = { "--fast" },
 		},
 		clang_format = {
-			args = {
+			prepend_args = {
 				"-style={BasedOnStyle: Microsoft, PointerAlignment: Left, IndentWidth: 2}",
 			},
 		},
@@ -23,8 +23,8 @@ conform.setup({
 		typescript = { "prettier" },
 		lua = { "stylua" },
 		go = { "gofumpt" },
-		c = { "clang-format" },
-		cpp = { "clang-format" },
+		c = { "clang_format" },
+		cpp = { "clang_format" },
 		java = { "google-java-format" },
 	},
 })
