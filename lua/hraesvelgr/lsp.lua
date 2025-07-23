@@ -22,19 +22,20 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-	lspconfig["omnisharp"].setup({
-		cmd = {
-			"omnisharp",
-			"-z",
-			"--hostPID",
-			tostring(vim.fn.getpid()),
-			"DotNet:enablePackageRestore=false",
-			"--encoding",
-			"utf-8",
-			"--languageserver",
-		},
-	})
-	if not lsp == "omnisharp" then
+	if lsp == "omnisharp" then
+		lspconfig["omnisharp"].setup({
+			cmd = {
+				"omnisharp",
+				"-z",
+				"--hostPID",
+				tostring(vim.fn.getpid()),
+				"DotNet:enablePackageRestore=false",
+				"--encoding",
+				"utf-8",
+				"--languageserver",
+			},
+		})
+	else
 		lspconfig[lsp].setup({
 			on_init = on_init,
 			on_attach = function(client)
