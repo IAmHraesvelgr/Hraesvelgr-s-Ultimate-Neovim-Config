@@ -34,7 +34,7 @@ for _, lsp in ipairs(servers) do
 				"--languageserver",
 			},
 		})
-	elseif lsp == "clangd" then
+	if lsp == "clangd" then
 		lspconfig.clangd.setup({
 			on_attach = function(client, bufnr)
 				client.server_capabilities.signatureHelpProvider = false
