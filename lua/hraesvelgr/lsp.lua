@@ -9,40 +9,41 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"bashls",
 	"cmake",
-	"omnisharp",
 	"cssls",
-	"gopls",
 	"html",
 	"lua_ls",
 	"pyright",
 	"ts_ls",
 	"jdtls",
-	"rust_analyzer",
 }
 
+lspconfig.omnisharp.setup({
+	cmd = {
+		"omnisharp",
+		"-z",
+		"--hostPID",
+		tostring(vim.fn.getpid()),
+		"DotNet:enablePackageRestore=false",
+		"--encoding",
+		"utf-8",
+		"--languageserver",
+		on_attach = function(client, bufnr)
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+			on_attach(client, bufnr)
+		end,
+	},
+})
+lspconfig.clangd.setup({
+	on_attach = function(client, bufnr)
+		client.server_capabilities.signatureHelpProvider = false
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.documentRangeFormattingProvider = false
+		on_attach(client, bufnr)
+	end,
+})
+
 for _, lsp in ipairs(servers) do
-	if lsp == "omnisharp" then
-		lspconfig["omnisharp"].setup({
-			cmd = {
-				"omnisharp",
-				"-z",
-				"--hostPID",
-				tostring(vim.fn.getpid()),
-				"DotNet:enablePackageRestore=false",
-				"--encoding",
-				"utf-8",
-				"--languageserver",
-			},
-		})
-	end
-	if lsp == "clangd" then
-		lspconfig.clangd.setup({
-			on_attach = function(client, bufnr)
-				client.server_capabilities.signatureHelpProvider = false
-				on_attach(client, bufnr)
-			end,
-		})
-	end
 	lspconfig[lsp].setup({
 		on_init = on_init,
 		on_attach = function(client)
