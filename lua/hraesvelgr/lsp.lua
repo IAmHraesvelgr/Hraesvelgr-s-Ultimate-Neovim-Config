@@ -8,7 +8,6 @@ local lspconfig = require("lspconfig")
 
 local servers = {
 	"bashls",
-	"clangd",
 	"cmake",
 	"omnisharp",
 	"cssls",
@@ -34,6 +33,13 @@ for _, lsp in ipairs(servers) do
 				"utf-8",
 				"--languageserver",
 			},
+		})
+	elseif lsp == "clangd" then
+		lspconfig.clangd.setup({
+			on_attach = function(client, bufnr)
+				client.server_capabilities.signatureHelpProvider = false
+				on_attach(client, bufnr)
+			end,
 		})
 	else
 		lspconfig[lsp].setup({
