@@ -42,16 +42,15 @@ for _, lsp in ipairs(servers) do
 				on_attach(client, bufnr)
 			end,
 		})
-	else
-		lspconfig[lsp].setup({
-			on_init = on_init,
-			on_attach = function(client)
-				client.server_capabilities.documentFormattingProvider = false
-				client.server_capabilities.documentRangeFormattingProvider = false
-				on_attach()
-			end,
-			capabilities = capabilities,
-			defaults = defaults,
-		})
 	end
+	lspconfig[lsp].setup({
+		on_init = on_init,
+		on_attach = function(client)
+			client.server_capabilities.documentFormattingProvider = false
+			client.server_capabilities.documentRangeFormattingProvider = false
+			on_attach()
+		end,
+		capabilities = capabilities,
+		defaults = defaults,
+	})
 end
