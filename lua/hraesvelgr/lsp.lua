@@ -9,6 +9,7 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"bashls",
 	"cmake",
+	"clangd",
 	"cssls",
 	"html",
 	"lua_ls",
@@ -33,14 +34,6 @@ lspconfig.omnisharp.setup({
 			on_attach(client, bufnr)
 		end,
 	},
-})
-lspconfig.clangd.setup({
-	on_attach = function(client, bufnr)
-		client.server_capabilities.signatureHelpProvider = false
-		client.server_capabilities.documentFormattingProvider = false
-		client.server_capabilities.documentRangeFormattingProvider = false
-		on_attach(client, bufnr)
-	end,
 })
 
 for _, lsp in ipairs(servers) do
