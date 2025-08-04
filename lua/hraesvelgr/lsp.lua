@@ -15,6 +15,7 @@ local servers = {
 	"lua_ls",
 	"pyright",
 	"ts_ls",
+	"rust_analyzer",
 	"jdtls",
 }
 
