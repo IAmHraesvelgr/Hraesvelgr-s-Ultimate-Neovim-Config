@@ -26,6 +26,5 @@ conform.setup({
 		c = { "clang_format" },
 		cpp = { "clang_format" },
 		java = { "google-java-format" },
-		rust = { "rustfmt" },
 	},
 })
