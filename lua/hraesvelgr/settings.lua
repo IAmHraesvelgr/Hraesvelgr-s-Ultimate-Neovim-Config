@@ -2,6 +2,9 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+o.winborder = "rounded"
+o.wrap = false
+
 o.laststatus = 3
 o.showmode = false
 
@@ -12,7 +15,7 @@ o.cursorlineopt = "number"
 o.expandtab = true
 o.shiftwidth = 2
 o.smartindent = true
-o.tabstop = 2
+o.tabstop = 4
 o.linebreak = true
 
 opt.fillchars = { eob = " " }
@@ -41,22 +44,22 @@ g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
-opt.hlsearch = false
-opt.incsearch = true
+o.hlsearch = false
+o.incsearch = true
 
-opt.termguicolors = true
+o.termguicolors = true
 
-opt.swapfile = false
-opt.backup = false
-opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+o.swapfile = false
+o.backup = false
+o.undodir = vim.fn.stdpath("data") .. "/undodir"
 
-opt.smoothscroll = true
+o.smoothscroll = true
 
 vim.diagnostic.config({
 	virtual_text = false,
 })
 
-opt.mouse = ""
+o.mouse = ""
 
 g.have_nerd_font = true
 o.inccommand = "split"
