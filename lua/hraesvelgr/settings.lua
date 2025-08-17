@@ -2,7 +2,6 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
-o.winborder = "rounded"
 o.wrap = false
 opt.cursorcolumn = false
 opt.ignorecase = true
