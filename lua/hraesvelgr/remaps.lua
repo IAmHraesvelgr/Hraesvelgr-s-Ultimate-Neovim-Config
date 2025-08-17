@@ -7,7 +7,8 @@ map("n", "<leader>vs", function()
 	vim.cmd("vsplit")
 end)
 
-map("n", "<leader>ee", vim.cmd.Oil)
+map("n", "<leader>ee", vim.cmd.NvimTreeFocus)
+map("n", "<leader>et", vim.cmd.NvimTreeToggle)
 
 map("n", "<leader>ff", require("telescope.builtin").find_files, {})
 
