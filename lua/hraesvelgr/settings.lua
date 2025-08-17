@@ -4,6 +4,8 @@ local g = vim.g
 
 o.winborder = "rounded"
 o.wrap = false
+opt.cursorcolumn = false
+opt.ignorecase = true
 
 o.laststatus = 3
 o.showmode = false
@@ -15,7 +17,7 @@ o.cursorlineopt = "number"
 o.expandtab = true
 o.shiftwidth = 2
 o.smartindent = true
-o.tabstop = 4
+o.tabstop = 2
 o.linebreak = true
 
 opt.fillchars = { eob = " " }
