@@ -1,13 +1,13 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		config = function()
 			require("hraesvelgr.configs.mason")
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
-		event = "User FilePost",
+		event = "VeryLazy",
 		config = function()
 			require("hraesvelgr.configs.lsp").defaults()
 		end,
