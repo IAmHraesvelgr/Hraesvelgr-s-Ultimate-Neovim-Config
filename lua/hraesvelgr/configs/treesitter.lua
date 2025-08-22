@@ -1,5 +1,5 @@
 local opts = {
-	ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc" },
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
 	highlight = {
 		enable = true,
