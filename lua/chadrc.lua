@@ -11,7 +11,7 @@ M.ui = {
 	cmp = {
 		icons_left = true,
 		lspkind_text = true,
-		style = "default",
+		style = "flat_dark",
 		format_colors = {
 			lsp = true,
 		},
