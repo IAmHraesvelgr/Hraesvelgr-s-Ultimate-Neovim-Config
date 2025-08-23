@@ -19,5 +19,7 @@ return {
 				end,
 			},
 		})
+
+		dofile(vim.g.base46_cache .. "devicons")
 	end,
 }

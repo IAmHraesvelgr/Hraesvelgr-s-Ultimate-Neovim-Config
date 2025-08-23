@@ -1,6 +1,8 @@
 return {
 	"saghen/blink.cmp",
-	version = "1.*",
 	event = { "InsertEnter", "CmdLineEnter" },
 	opts = require("hraesvelgr.configs.blink"),
+	config = function()
+		dofile(vim.g.base46_cache .. "blink")
+	end,
 }
