@@ -20,5 +20,3 @@ require("telescope").setup({
 	extensions_list = { "themes", "terms" },
 	extensions = {},
 })
-
-dofile(vim.g.base46_cache .. "telescope")

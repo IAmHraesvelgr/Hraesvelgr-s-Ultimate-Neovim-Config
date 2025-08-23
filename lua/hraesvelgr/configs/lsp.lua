@@ -56,6 +56,4 @@ M.defaults = function()
 	require("nvchad.lsp").diagnostic_config()
 end
 
-dofile(vim.g.base46_cache .. "lsp")
-
 return M
