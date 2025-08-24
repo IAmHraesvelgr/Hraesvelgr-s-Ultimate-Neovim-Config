@@ -38,5 +38,6 @@ vim.lsp.enable({
 	"gopls",
 	"jdtls",
 	"lua_ls",
+	"v_analyzer",
 	"omnisharp",
 })
