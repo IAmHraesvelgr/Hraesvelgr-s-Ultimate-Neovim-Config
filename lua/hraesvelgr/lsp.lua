@@ -10,6 +10,7 @@ local servers = {
 	"ts_ls",
 	"gopls",
 	"jdtls",
+	"v_analyzer",
 	"omnisharp",
 }
 
