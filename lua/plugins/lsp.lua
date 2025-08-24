@@ -10,6 +10,7 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("hraesvelgr.configs.lsp").defaults()
+			require("hraesvelgr.lsp")
 		end,
 	},
 	{
