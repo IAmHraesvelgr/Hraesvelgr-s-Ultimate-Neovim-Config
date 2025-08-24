@@ -27,6 +27,5 @@ for _, lsp in ipairs(servers) do
 		capabilities = configs.capabilities,
 		defaults = configs.defaults,
 	})
+	vim.lsp.enable(lsp)
 end
-
-vim.lsp.enable(servers)
