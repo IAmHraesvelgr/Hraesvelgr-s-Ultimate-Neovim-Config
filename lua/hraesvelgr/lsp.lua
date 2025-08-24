@@ -10,6 +10,7 @@ local servers = {
 	"ts_ls",
 	"gopls",
 	"jdtls",
+	"lua_ls",
 	"v_analyzer",
 	"omnisharp",
 }
@@ -19,6 +20,7 @@ for _, lsp in ipairs(servers) do
 		on_attach = function(client, bufnr)
 			client.server_capabilities.documentFormattingProvider = false
 			client.server_capabilities.documentRangeFormattingProvider = false
+			client.server_capabilities.semanticTokensProvider = nil
 			configs.on_attach(client, bufnr)
 		end,
 		on_init = configs.on_init,
@@ -27,17 +29,4 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-vim.lsp.enable({
-	"bashls",
-	"cmake",
-	"clangd",
-	"cssls",
-	"html",
-	"pyright",
-	"ts_ls",
-	"gopls",
-	"jdtls",
-	"lua_ls",
-	"v_analyzer",
-	"omnisharp",
-})
+vim.lsp.enable(servers)
