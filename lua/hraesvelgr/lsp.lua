@@ -9,9 +9,8 @@ local servers = {
 	"pyright",
 	"ts_ls",
 	"gopls",
-	"jdtls",
 	"lua_ls",
-	"v_analyzer",
+	"svelte",
 	"omnisharp",
 }
 
