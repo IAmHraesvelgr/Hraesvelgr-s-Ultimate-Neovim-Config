@@ -21,6 +21,7 @@ conform.setup({
 		css = { "prettier" },
 		javascript = { "prettier" },
 		typescript = { "prettier" },
+		svelte = { "prettier" },
 		lua = { "stylua" },
 		go = { "gofumpt" },
 		c = { "clang_format" },
