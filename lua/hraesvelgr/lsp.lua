@@ -3,7 +3,6 @@ local configs = require("hraesvelgr.configs.lsp")
 local servers = {
 	"bashls",
 	"cmake",
-	"clangd",
 	"cssls",
 	"html",
 	"pyright",
