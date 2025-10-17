@@ -25,6 +25,9 @@ require("lazy").setup("plugins", {
 			"nvchad",
 		},
 	},
+	ui = {
+		border = "single",
+	},
 	performance = {
 		rtp = {
 			disabled_plugins = {
