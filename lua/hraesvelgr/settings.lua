@@ -60,6 +60,8 @@ vim.diagnostic.config({
 	virtual_text = false,
 })
 
+opt.winborder = "single"
+
 o.mouse = ""
 
 g.have_nerd_font = true
