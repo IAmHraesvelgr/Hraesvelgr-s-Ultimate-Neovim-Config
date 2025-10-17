@@ -10,6 +10,8 @@ local opts = {
 		"typescript",
 		"cmake",
 		"lua",
+		"luadoc",
+		"printf",
 		"vim",
 		"vimdoc",
 		"query",

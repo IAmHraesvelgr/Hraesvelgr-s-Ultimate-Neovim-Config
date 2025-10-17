@@ -54,6 +54,11 @@ M.capabilities.textDocument.completion.completionItem = {
 
 M.defaults = function()
 	require("nvchad.lsp").diagnostic_config()
+	vim.api.nvim_create_autocmd("LspAttach", {
+		callback = function(args)
+			M.on_attach(_, args.buf)
+		end,
+	})
 end
 
 return M

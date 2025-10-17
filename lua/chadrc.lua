@@ -14,6 +14,7 @@ M.ui = {
 		style = "flat_dark",
 		format_colors = {
 			lsp = true,
+			icon = "󱓻",
 		},
 	},
 	telescope = {
@@ -44,7 +45,7 @@ M.colorify = {
 }
 
 M.lsp = {
-	signatures = true,
+	signature = true,
 }
 
 return M
